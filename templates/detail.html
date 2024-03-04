@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>details</title>  
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/js' %}">
+    <link rel="stylesheet" href="{% static 'assets/css' %}">
+  
+    <style>
+        body{
+            background-color:burlywood;
+        }
+        H1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<H1>DETAILS</H1>
+
+{% for appointment in details %}
+    <div class="container">
+        <b>NAME:</b> {{ appointment.name}}<br>
+        <b>EMAIL:</b> {{ appointment.email}}<br>
+        <b>DATE:</b> {{ appointment.date}}<br>
+        <b>PHONE:</b> {{ appointment.phone}}<br>
+        <b>MESSAGE:</b> {{ appointment.message}}<br>
+    <hr>
+        
+    </div>
+{% endfor %}
+
+
+</body>
+</html>

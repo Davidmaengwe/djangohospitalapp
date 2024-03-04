@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>details</title>
+    <style>
+        body{
+            background-color: #b4aa8f;
+        }
+        h1{
+            text-align: center;
+            color: #0a58ca;
+        }
+        div{margin-left: 20px;
+        }
+        b{
+            color: #1e2833;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<h1>USERS</h1>
+
+{% for users in detail2 %}
+    <div>
+        <b>NAME:</b>{{user.Fullnam}}<br>
+        <b>USERNAME:</b>{{user.Username}}<br>
+        <b>EMAIL:</b>{{user.Email}}<br>
+        <b>PASSWORD:</b>{{user.Password}}<br>
+        <b>AGE:</b>{{user.Age}}<br>
+        <b>YEAROFBIRTH:</b>{{user.Yearofbirth}}<br>
+    </div>
+    <hr>
+{% endfor %}
+
+
+</body>
+</html>
